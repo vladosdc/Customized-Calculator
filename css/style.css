@@ -1,0 +1,12 @@
+.calculator{
+    margin-top: 100px;
+    margin-left: 100px;
+
+}
+
+.flex_calc{
+    display: flex;
+}
+button{
+    color: darkred;
+}
