@@ -6,7 +6,12 @@
 
 .flex_calc{
     display: flex;
+    gap: 10px;
 }
 button{
     color: darkred;
+
+}
+h1{
+    margin-left: 100px;
 }
