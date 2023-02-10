@@ -1,17 +1,44 @@
 .calculator{
     margin-top: 100px;
-    margin-left: 100px;
-
-}
-
-.flex_calc{
     display: flex;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+
+
 }
+.title{
+text-align: center;
+}
+
+
+.numbersAndMathOperators{
+    margin-top: 20px;
+}
+.button_proportions{
+    margin: 2px;
+    width: 50px;
+    height: 50px;
+
+}
+.input_fields {
+    width: 218px;
+    height: 60px;
+    text-align: right;
+}
+/*Убираем выбор цифр*/
+.input_fields[type="number"]::-webkit-outer-spin-button,
+.input_fields[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input_fields[type="number"] {
+    -moz-appearance: textfield;
+}
+
 button{
     color: darkred;
 
-}
-h1{
-    margin-left: 100px;
+
 }
