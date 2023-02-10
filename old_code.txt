@@ -1,4 +1,4 @@
-html
+//html
 
 			<p>Число 1: <input type="text" id="number_one"></p>
 				<p>+</p>
@@ -7,7 +7,7 @@ html
 				<button class="look_result">Посчитать</button>
 
 
-js
+//js
 
 let elem1 = document.getElementById("number_one")
 let elem2 = document.getElementById("number_two")
