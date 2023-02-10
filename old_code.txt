@@ -6,6 +6,9 @@ html
 			<p>Результат: <input type="text" id="result"></p>
 				<button class="look_result">Посчитать</button>
 
+
+js
+
 let elem1 = document.getElementById("number_one")
 let elem2 = document.getElementById("number_two")
 let result1 = document.getElementById("result")

@@ -1,2 +1,7 @@
-#Git calculator
-Calculator (V-1.0)
+# Calculator (V - 1.1)
+
+**_Версии_**
+
+v.1.0 - Наброска
+
+v.1.1 - Новый интрфейс 
