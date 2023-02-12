@@ -26,16 +26,6 @@ text-align: center;
     height: 60px;
     text-align: right;
 }
-/*Убираем выбор цифр*/
-.input_fields[type="number"]::-webkit-outer-spin-button,
-.input_fields[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-.input_fields[type="number"] {
-    -moz-appearance: textfield;
-}
 
 button{
     color: darkred;
