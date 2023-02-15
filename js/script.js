@@ -4,11 +4,11 @@
         let result = eval(input);
         let showResult = document.getElementById('input_fields');
         showResult.value = result;
-            if (input === "") {
-                document.getElementById("input_fields").value = input;
 
+         if (input === "") {
+             document.getElementById('input_fields').value = input;
             }
-    });
+        });
 
         
         //При нажатии на кнопку цифра или оператор переноситься в поле input
