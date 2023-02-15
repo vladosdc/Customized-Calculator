@@ -22,13 +22,16 @@ text-align: center;
 
 }
 .input_fields {
+    border-radius: 10px;
     width: 218px;
     height: 60px;
     text-align: right;
 }
 
 .button_proportions{
+    border-radius: 10px;
     color: darkred;
+    border: 1px solid black;
 }
 
 .setting_block{

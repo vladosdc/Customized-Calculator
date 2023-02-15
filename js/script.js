@@ -4,6 +4,10 @@
         let result = eval(input);
         let showResult = document.getElementById('input_fields');
         showResult.value = result;
+            if (input === "") {
+                document.getElementById("input_fields").value = input;
+
+            }
     });
 
         
