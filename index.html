@@ -14,57 +14,67 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	</head>
 	<!-- Отображаемое тело страницы -->
-	<body>
+	<body >
 	<main>
 		<div class="wrapper dark_mode">
 		<h1 class="title">Customized Calculator</h1>
 			<div class="title_version">
-				<p class="text_version">Alpha version 1.3</p>
+				<p class="text_version">Version 1.3</p>
 			</div>
 		<div class="calculator">
 			<div class="flex_calc">
+				<div class="error_message" id="error-message">
+				</div>
 				<input type="text" id="input_fields" class="input_fields" placeholder="0">
+
+
 				<div class="numbersAndMathOperators">
-					<div class="reset">
-					<button class="button_proportions" id="reset">Reset</button>
+					<div class="row">
+					<button class="button_proportions reset_button" id="reset">AC</button>
+					<button class="button_proportions" id="sin_button">sin</button>
+					<button class="button_proportions" id="math_operator">%</button>
 					</div>
 					<div class="row">
-				 <button class="button_proportions" id="number_7">7</button>
-					<button class="button_proportions" id="number_8">8</button>
-					<button class="button_proportions" id="number_9">9</button>
-					<button class="button_proportions" id="operator_plus">+</button>
+				 <button class="button_proportions" id="number">7</button>
+					<button class="button_proportions" id="number">8</button>
+					<button class="button_proportions" id="number">9</button>
+					<button class="button_proportions" id="math_operator">+</button>
 					</div>
 					<div class="row">
-						<button class="button_proportions" id="number_4">4</button>
-						<button class="button_proportions" id="number_5">5</button>
-						<button class="button_proportions" id="number_6">6</button>
-						<button class="button_proportions" id="operator_minus">-</button>
+						<button class="button_proportions" id="number">4</button>
+						<button class="button_proportions" id="number">5</button>
+						<button class="button_proportions" id="number">6</button>
+						<button class="button_proportions" id="math_operator">-</button>
 					</div>
 					<div class="row">
-						<button class="button_proportions" id="number_1">1</button>
-						<button class="button_proportions" id="number_2">2</button>
-						<button class="button_proportions" id="number_3">3</button>
-						<button class="button_proportions" id="operator_multiplication">*</button>
+						<button class="button_proportions" id="number">1</button>
+						<button class="button_proportions" id="number">2</button>
+						<button class="button_proportions" id="number">3</button>
+						<button class="button_proportions" id="math_operator">*</button>
 					</div>
 					<div class="row">
-						<button class="button_proportions" id="number_0">0</button>
-						<button class="button_proportions" id="dot">.</button>
-						<button class="button_proportions" id="operator_division">/</button>
+						<button class="button_proportions" id="number">0</button>
+						<button class="button_proportions" id="math_operator">.</button>
+						<button class="button_proportions" id="math_operator">/</button>
 						<button class="button_proportions" id="operator_equals">=</button>
 					</div>
 				</div>
 					<div class="setting_block">
 						<button class="setting_button">
 						<p class="settings_text">Settings</p>
-						<img class="img_setting" src="img/icon_settings.png" alt="">
+						<img class="img_setting" src="img/icon_settings.png" alt="Setting Icon">
 						</button>
 					</div>
 				<div class="Customized_menu menuCustom">
+<!--					Dark_Mode-->
 					<p class="text_Darkmode">Dark mode</p>
 					<label class="switch">
 						<input type="checkbox" id="darkmode">
 						<span class="slider round"></span>
 					</label>
+
+
+
 				</div>
 
 			</div>
@@ -73,8 +83,10 @@
 
 		</div>
 	</main>
-
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.5.1/math.js"></script>
 		<script src="js/script.js"></script>
+
+
 	</body>
 	</html>
 

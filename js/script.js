@@ -1,96 +1,60 @@
-       let count = document.getElementById('operator_equals');
-        count.addEventListener("click", function() {
-        let input = document.getElementById('input_fields').value;
-        let result = eval(input);
-        let showResult = document.getElementById('input_fields');
+        let count = document.getElementById('operator_equals');
+        let input_fields = document.getElementById('input_fields');
+        let error_msg = document.getElementById('error-message')
+
+
+        count.addEventListener("click", function () {
+        let input = input_fields.value;
+        if (input === '') {
+            error_msg.innerHTML = "Enter something!";
+            let img = document.createElement('img');
+            img.src = 'img/icon_error.png';
+            img.classList.add('img_error')
+            error_msg.appendChild(img);
+        }
+        try {
+        let result = math.evaluate(input);
+        let showResult = input_fields;
         showResult.value = result;
+        showResult.value = result === undefined ? '' : result;
 
-         if (input === "") {
-             document.getElementById('input_fields').value = input;
-            }
+        } catch (error) {
+            error_msg.innerHTML = 'Error - check the expression!';
+            let img = document.createElement('img');
+            img.src = 'img/icon_error.png';
+            img.classList.add('img_error')
+            error_msg.appendChild(img);
+        }
         });
+        input_fields.addEventListener("click", function (){
+            error_msg.innerHTML = "";
+        })
 
-        
+
+
+
         //При нажатии на кнопку цифра или оператор переноситься в поле input
-        let get_number1 = document.getElementById('number_1')
-        get_number1.addEventListener("click", function (){
-            input_fields.value += get_number1.innerHTML;
+        let get_number = document.querySelectorAll('#number')
+        get_number.forEach(function (number_button){
+            number_button.addEventListener("click", function (){
+            input_fields.value += number_button.innerHTML;
+            error_msg.innerHTML = "";
+        })
         })
 
-       let get_number2 = document.getElementById('number_2')
-        get_number2.addEventListener("click", function (){
-            input_fields.value += get_number2.innerHTML;
-        })
-
-       let get_number3 = document.getElementById('number_3')
-        get_number3.addEventListener("click", function (){
-            input_fields.value += get_number3.innerHTML;
-        })
-
-       let get_number4 = document.getElementById('number_4')
-        get_number4.addEventListener("click", function (){
-            input_fields.value += get_number4.innerHTML;
-        })
-
-       let get_number5 = document.getElementById('number_5')
-        get_number5.addEventListener("click", function (){
-            input_fields.value += get_number5.innerHTML;
-        })
-
-       let get_number6 = document.getElementById('number_6')
-        get_number6.addEventListener("click", function (){
-            input_fields.value += get_number6.innerHTML;
-        })
-
-       let get_number7 = document.getElementById('number_7')
-        get_number7.addEventListener("click", function (){
-            input_fields.value += get_number7.innerHTML;
-        })
-
-       let get_number8 = document.getElementById('number_8')
-        get_number8.addEventListener("click", function (){
-            input_fields.value += get_number8.innerHTML;
-        })
-
-       let get_number9 = document.getElementById('number_9')
-        get_number9.addEventListener("click", function (){
-            input_fields.value += get_number9.innerHTML;
-        })
-
-       let get_number0 = document.getElementById('number_0')
-        get_number0.addEventListener("click", function (){
-            input_fields.value += get_number0.innerHTML;
-        })
-
-       let get_operatorPlus = document.getElementById('operator_plus')
-        get_operatorPlus.addEventListener("click", function (){
-            input_fields.value += get_operatorPlus.innerHTML;
-        })
-
-        let get_operatorMinus = document.getElementById('operator_minus')
-        get_operatorMinus.addEventListener("click", function (){
-            input_fields.value += get_operatorMinus.innerHTML;
-        })
-
-        let get_operatorMultiplication = document.getElementById('operator_multiplication')
-        get_operatorMultiplication.addEventListener("click", function (){
-            input_fields.value += get_operatorMultiplication.innerHTML;
-        })
-
-        let get_operatorDivision = document.getElementById('operator_division')
-        get_operatorDivision.addEventListener("click", function (){
-            input_fields.value += get_operatorDivision.innerHTML;
-        })
-
-        let get_dot = document.getElementById('dot')
-        get_dot.addEventListener("click", function (){
-            input_fields.value += get_dot.innerHTML;
+        let get_mathOperator = document.querySelectorAll('#math_operator')
+        get_mathOperator.forEach(function (mathOperator){
+            mathOperator.addEventListener("click", function (){
+                input_fields.value += mathOperator.innerHTML;
+                error_msg.innerHTML = "";
+            })
         })
 
        let reset = document.getElementById('reset')
        reset.addEventListener("click", function (){
            let inputReset = document.getElementById('input_fields')
-           inputReset.value = ""
+           inputReset.value = "";
+           error_msg.innerHTML = "";
        })
 
        //Settings
@@ -101,10 +65,39 @@
        btnSettings.addEventListener("click", function (){
            menuOpen.classList.toggle('menuCustom-open')
        })
-
+       //Dark_Mode
        let darkmode_checkbox = document.getElementById('darkmode');
-       let darkmode = document.querySelector('.dark_mode')
+       let darkmode = document.querySelector('body')
+       let button_darkmode = document.querySelectorAll('.button_proportions')
+       let inputfield = document.querySelector('.input_fields')
 
        darkmode_checkbox.addEventListener("click", function (){
-           darkmode.classList.toggle('dark_mode-active')
+           darkmode.classList.toggle('dark_mode-body')
+           button_darkmode.forEach(function(button_darkmode) {
+               button_darkmode.classList.toggle("button_darkmode");
+           });
+           inputfield.classList.toggle('input_darkmode')
+
+
+
        })
+
+        let sinBtn = document.getElementById("sin_button");
+        let inputFields = document.getElementById("input_fields");
+
+        sinBtn.addEventListener("click", function() {
+            let input = inputFields.value;
+            if (input === '') {
+                error_msg.innerHTML = "Error - check the expression!";
+                let img = document.createElement('img');
+                img.src = 'img/icon_error.png';
+                img.classList.add('img_error')
+                error_msg.appendChild(img);
+                return;
+            }
+            error_msg.innerHTML = "";
+            let result = Math.sin(parseFloat(input));
+            inputFields.value = result;
+        });
+
+
