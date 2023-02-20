@@ -1,5 +1,17 @@
+
+
+@font-face {
+    font-family: "Main_Font";
+    src: url("../fonts/Lexend-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
 body{
+    font-family: Main_Font, sans-serif;
     touch-action: manipulation;
+}
+button{
+    font-family: Main_Font, sans-serif;
 }
 
 .calculator{
@@ -27,6 +39,7 @@ text-align: center;
 }
 
 .input_fields {
+    font-family: Main_Font, sans-serif;
     border-radius: 10px;
     width: 218px;
     height: 60px;
@@ -110,10 +123,7 @@ text-align: center;
 
 
 
-.switch{
-    margin-left: 5px;
-    margin-top: 19px;
-}
+
 .switch {
     margin-left: 5px;
     margin-top: 0;
@@ -216,10 +226,7 @@ button.button_darkmode{
 
 /*Anime switcher setting*/
 
-.switch_anime{
-    margin-left: 5px;
-    margin-top: 19px;
-}
+
 .switch_anime {
     margin-left: 5px;
     margin-top: 0;
@@ -383,6 +390,88 @@ input.anime_inputField{
             -1px 1px 0 #000,  /* тень слева снизу */
             1px 1px 0 #000;   /* тень справа снизу */
 }
+
+/*---End---*/
+
+
+/*Customized Settings*/
+
+/*Animation Text - Customized Settings */
+
+.Customized_SettingsText{}
+.animationRainbow {
+    background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: rainbow 20s ease infinite;
+    animation: rainbow 20s ease infinite;
+    font-size: 18px;
+    line-height: 45px;
+}
+
+@-webkit-keyframes rainbow {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+}
+
+/*---Animation End---*/
+
+.change_titleBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ChangeName_Input{
+    font-family: "Main_Font", sans-serif;
+    padding-left: 5px;
+    width: 150px;
+    height: 30px;
+    margin-left: 4px;
+    border-radius: 15px;
+    border: 2px solid black;
+
+}
+
+.ChangeName_btn {
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    display: inline-block;
+
+    margin: 10px 20px;
+    border-radius: 30px;
+    background-color: rgba(46, 229, 157, 1.0);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 18px;
+    color: white;
+    box-shadow: 0 16px 32px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.ChangeName_btn:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+.change_nameText{
+
+}
+
+
+
+
+
+
+
+
 
 /*Adaptive*/
 @media only screen and (max-width: 450px) {

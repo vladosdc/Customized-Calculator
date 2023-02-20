@@ -130,6 +130,22 @@
             text_AnimeTheme.classList.toggle('themeIntefaceText_AnimeFont')
         })
 
+        let TitleText = document.querySelector('.title')
+        let InputChange = document.getElementById('change_nameInput')
+        let BtnChange = document.querySelector('.ChangeName_btn')
+
+        BtnChange.addEventListener('click', function (){
+            TitleText.textContent = InputChange.value
+            if (InputChange.value === ""){
+            TitleText.innerHTML = "Customized Calculator";
+            }
+        })
+
+
+
+
+
+
         //Запрещаем включать другие теми когда одна уже включена
         let checkboxTheme_Dark = document.getElementById('darkmode')
         let checkboxTheme_Anime = document.getElementById('anime_theme')
