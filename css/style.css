@@ -1,12 +1,13 @@
 .calculator{
-    margin-top: 100px;
+    margin-top: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 40px;
 
 
 }
+
+
 .title{
 text-align: center;
 }
@@ -36,6 +37,7 @@ text-align: center;
     margin-top: 40px;
     margin-left: 5px;
     color: red;
+
 }
 .img_error{
     float: left;
@@ -52,8 +54,6 @@ text-align: center;
 }
 
 .setting_block{
-
-
     margin-top: 20px;
     display: flex;
     align-items: center;
@@ -87,22 +87,33 @@ text-align: center;
     font-size: 18px;
 
 }
-.Customized_menu{
-    display: flex;
-}
+
 .menuCustom{
     display: none;
 }
 .menuCustom-open{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 
 }
+
+.theme_block{
+    display: flex;
+    align-items: center;
+}
+
+
 
 
 .switch{
     margin-left: 5px;
     margin-top: 19px;
+}
+.switch {
+    margin-left: 5px;
+    margin-top: 0;
 }
 
 .switch {
@@ -187,4 +198,199 @@ button.button_darkmode{
 }
 .input_darkmode::placeholder{
     color: white;
+}
+.setting_buttonDarkTheme{
+    background-color: grey;
+    color: white;
+}
+
+/*Anime Theme*/
+
+.text_anime{
+    font-size: 18px;
+}
+
+
+/*Anime switcher setting*/
+
+.switch_anime{
+    margin-left: 5px;
+    margin-top: 19px;
+}
+.switch_anime {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switch_anime {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+}
+
+.switch_anime input {display:none;}
+
+.slideranime {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slideranime:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slideranime {
+    background-color: hotpink;
+}
+
+input:focus + .slideranime {
+    box-shadow: 0 0 1px hotpink;
+}
+
+input:checked + .slideranime:before {
+    -webkit-transform: translateX(23px);
+    -ms-transform: translateX(23px);
+    transform: translateX(23px);
+}
+
+.slideranime.roundanime {
+    border-radius: 34px;
+}
+
+.slideranime.roundanime:before {
+    border-radius: 50%;
+}
+
+
+
+/*Anime Theme setting*/
+@font-face {
+    font-family: "AnimeTheme_Font";
+    src: url("../fonts/Anime Ace v3.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+body.anime_bodyTheme{
+    background: url("../img/anime_backgorund.png") no-repeat center center fixed;
+    background-size: cover;
+    color: hotpink;
+    font-weight: bold;
+
+}
+
+
+button.anime_button{
+    font-family: AnimeTheme_Font, sans-serif;
+    border-radius: 15px;
+    background: url("../img/button_bakcground.jpg") no-repeat center center fixed;
+    color: black;
+    font-weight: bold;
+    border: 2px solid hotpink;
+    font-size: 20px;
+}
+
+.text_versionAnimeTheme{
+    font-family: AnimeTheme_Font, sans-serif;
+    opacity: 0.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titleAnime_Theme{
+    font-family: AnimeTheme_Font, sans-serif;
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+input.anime_inputField{
+    font-family: AnimeTheme_Font, sans-serif;
+    border-radius: 15px;
+    background: url("../img/inputField_anime.gif") ;
+    background-size: cover;
+    font-weight: bold;
+    font-size: 23px;
+    border: 2px solid hotpink;
+    color: white;
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+
+.anime_inputField::placeholder{
+    color: white;
+}
+.setting_buttonAnimeTheme{
+    font-family: AnimeTheme_Font, sans-serif;
+    background: url("../img/setting_buttonAnime.gif") center center;
+    background-size: cover;
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid hotpink;
+    color: hotpink;
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+.anime_inputField:focus {
+    outline: none
+}
+
+.error_messageAnime{
+    position: absolute;
+    text-align: center;
+    margin-top: 43px;
+    margin-left: 5px;
+    color: red;
+    font-size: 15px;
+}
+.themeIntefaceText_AnimeFont {
+    font-family: AnimeTheme_Font, sans-serif;
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+
+/*Adaptive*/
+@media only screen and (max-width: 450px) {
+.title{
+    font-size: 25px;
+}
+.calculator{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+    }
 }
