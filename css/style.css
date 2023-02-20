@@ -1,3 +1,7 @@
+body{
+    touch-action: manipulation;
+}
+
 .calculator{
     margin-top: 80px;
     display: flex;
@@ -11,7 +15,6 @@
 .title{
 text-align: center;
 }
-
 
 .numbersAndMathOperators{
     margin-top: 20px;
@@ -298,7 +301,8 @@ body.anime_bodyTheme{
 button.anime_button{
     font-family: AnimeTheme_Font, sans-serif;
     border-radius: 15px;
-    background: url("../img/button_bakcground.jpg") no-repeat center center fixed;
+    background: url("../img/button_bakcground.jpg")no-repeat center center local;
+    background-size: cover;
     color: black;
     font-weight: bold;
     border: 2px solid hotpink;
