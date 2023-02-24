@@ -99,6 +99,10 @@ text-align: center;
 
 /*Dark Mode menu*/
 
+
+.text_interfaceTheme{
+    font-size: 18px;
+}
 .text_Darkmode{
     font-size: 18px;
 
@@ -406,8 +410,9 @@ input.anime_inputField{
     -webkit-text-fill-color: transparent;
     -webkit-animation: rainbow 20s ease infinite;
     animation: rainbow 20s ease infinite;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 45px;
+    font-weight: bold;
 }
 
 @-webkit-keyframes rainbow {
@@ -446,14 +451,14 @@ input.anime_inputField{
     text-decoration: none;
     display: inline-block;
 
-    margin: 10px 20px;
+    margin: 8px 20px;
     border-radius: 30px;
     background-color: rgba(46, 229, 157, 1.0);
     background-position: 100% 0;
     font-family: 'Main_Font', sans-serif;
     font-size: 18px;
     color: white;
-    box-shadow: 0 16px 32px 0 rgba(0, 40, 120, .35);
+    box-shadow: 0 1px 15px 0 rgba(0, 40, 120, .35);
     transition: .5s;
     border: 0px;
 }
@@ -462,11 +467,545 @@ input.anime_inputField{
     background-position: 0 0;
 }
 .change_nameText{
+    font-size: 18px;
+}
+/*Select color */
+.ResetChangeName_btn {
+    width: 80px;
+    height: 30px;
+    text-decoration: none;
+    display: inline-block;
 
+    margin: 10px 20px;
+    border-radius: 30px;
+    background-color: rgba(230,0,35,1);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 18px;
+    color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.ResetChangeName_btn:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+
+
+/*switcher select color*/
+
+
+/*Red*/
+
+.switchColor_Red {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switchColor_Red {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.switchColor_Red input {display:none;}
+
+.sliderColor_Red {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+}
+
+.sliderColor_Red:before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 6px;
+    bottom: 6px;
+    background-color: white;
+    transition: .4s;
+}
+.clickEffect_selectColor:before{
+    transition: .4s;
+    transform: scale(1.4);
+}
+
+.sliderColor_Red.roundColor_Red {
+    border-radius: 34px;
+}
+
+.sliderColor_Red.roundColor_Red:before {
+    border-radius: 50%;
+}
+
+/*Orange*/
+
+
+.switchColor_Orange {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switchColor_Orange {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.switchColor_Orange input {display:none;}
+
+.sliderColor_Orange {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FF6600;
+}
+
+.sliderColor_Orange:before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 6px;
+    bottom: 6px;
+    background-color: white;
+    transition: .4s;
+}
+
+
+.sliderColor_Orange.roundColor_Orange {
+    border-radius: 34px;
+}
+
+.sliderColor_Orange.roundColor_Orange:before {
+    border-radius: 50%;
+}
+
+
+/*Yellow*/
+
+
+
+.switchColor_Yellow {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switchColor_Yellow {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.switchColor_Yellow input {display:none;}
+
+.sliderColor_Yellow {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FFFF33;
+}
+
+.sliderColor_Yellow:before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 6px;
+    bottom: 6px;
+    background-color: white;
+    transition: .4s;
+}
+
+
+.sliderColor_Yellow.roundColor_Yellow {
+    border-radius: 34px;
+}
+
+.sliderColor_Yellow.roundColor_Yellow:before {
+    border-radius: 50%;
 }
 
 
 
+/*Green*/
+
+
+.switchColor_Green {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switchColor_Green {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.switchColor_Green input {display:none;}
+
+.sliderColor_Green {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: green;
+}
+
+.sliderColor_Green:before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 6px;
+    bottom: 6px;
+    background-color: white;
+    transition: .4s;
+}
+
+
+.sliderColor_Green.roundColor_Green {
+    border-radius: 34px;
+}
+
+.sliderColor_Green.roundColor_Green:before {
+    border-radius: 50%;
+}
+
+/*Blue*/
+
+.switchColor_Blue {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switchColor_Blue {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.switchColor_Blue input {display:none;}
+
+.sliderColor_Blue {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: deepskyblue;
+}
+
+.sliderColor_Blue:before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 6px;
+    bottom: 6px;
+    background-color: white;
+    transition: .4s;
+}
+
+
+.sliderColor_Blue.roundColor_Blue {
+    border-radius: 34px;
+}
+
+.sliderColor_Blue.roundColor_Blue:before {
+    border-radius: 50%;
+}
+
+
+/*Dark_Blue*/
+
+.switchColor_DarkBlue {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switchColor_DarkBlue {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.switchColor_DarkBlue input {display:none;}
+
+.sliderColor_DarkBlue {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: blue;
+}
+
+.sliderColor_DarkBlue:before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 6px;
+    bottom: 6px;
+    background-color: white;
+    transition: .4s;
+}
+
+
+.sliderColor_DarkBlue.roundColor_DarkBlue {
+    border-radius: 34px;
+}
+
+.sliderColor_DarkBlue.roundColor_DarkBlue:before {
+    border-radius: 50%;
+}
+
+
+
+/*Purple*/
+
+
+.switchColor_Purple {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switchColor_Purple {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.switchColor_Purple input {display:none;}
+
+.sliderColor_Purple {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: purple;
+}
+
+.sliderColor_Purple:before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 6px;
+    bottom: 6px;
+    background-color: white;
+    transition: .4s;
+}
+
+
+.sliderColor_Purple.roundColor_Purple {
+    border-radius: 34px;
+}
+
+.sliderColor_Purple.roundColor_Purple:before {
+    border-radius: 50%;
+}
+
+/*Title Color Switch*/
+
+
+
+.titleColor_Red{
+    color: red;
+}
+
+
+
+.titleColor_Orange{
+    color: #FF6600;
+}
+
+.titleColor_Yellow{
+    color: #FFFF33;
+}
+
+.titleColor_Green{
+    color: green;
+}
+
+.titleColor_Blue{
+    color: deepskyblue;
+}
+
+.titleColor_DarkBlue{
+    color: blue;
+}
+
+.titleColor_Purple{
+    color: purple;
+}
+
+
+/*--End select color--*/
+
+
+/*style size button*/
+
+.sizeSmall_btn {
+    width: 55px;
+    height: 22px;
+    text-decoration: none;
+    display: inline-block;
+
+
+    border-radius: 30px;
+    background-color: rgba(115,123,129,1);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.sizeSmall_btn:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+.sizeMedium_btn{
+    width: 75px;
+    height: 26px;
+    text-decoration: none;
+    display: inline-block;
+
+
+    border-radius: 30px;
+    background-color: rgba(115,123,129,1);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.sizeMedium_btn:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+.sizeLarge_btn {
+    width: 65px;
+    height: 35px;
+    text-decoration: none;
+    display: inline-block;
+
+
+    border-radius: 30px;
+    background-color: rgba(115,123,129,1);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.sizeLarge_btn:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+
+
+
+
+/*Size Select*/
+
+
+button.button_Small {
+    font-size: 13px;
+}
+button.button_Medium{
+    font-size: 18px;
+}
+button.button_Large{
+    font-size: 21px;
+}
+
+
+
+/*Color Buttons Select*/
+
+
+button.BtnColor_Red{
+    color: red;
+}
+
+button.BtnColor_Orange{
+    color: #FF6600;
+}
+
+button.BtnColor_Yellow{
+color: #FFFF33
+}
+
+button.BtnColor_Green {
+    color: green;
+}
+
+button.BtnColor_Blue {
+    color: deepskyblue;
+}
+
+button.BtnColor_DarkBlue {
+    color: blue;
+}
+
+button.BtnColor_Purple {
+    color: purple;
+}
+
+.ResetButtonSettings_btn {
+    width: 80px;
+    height: 30px;
+    text-decoration: none;
+    display: inline-block;
+
+    margin: 10px 20px;
+    border-radius: 30px;
+    background-color: rgba(230,0,35,1);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 18px;
+    color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.ResetButtonSettings_btn:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
 
 
 

@@ -26,6 +26,8 @@
             error_msg.appendChild(img);
         }
         });
+
+
         input_fields.addEventListener("click", function (){
             error_msg.innerHTML = "";
         })
@@ -130,6 +132,9 @@
             text_AnimeTheme.classList.toggle('themeIntefaceText_AnimeFont')
         })
 
+
+
+        //Change Name
         let TitleText = document.querySelector('.title')
         let InputChange = document.getElementById('change_nameInput')
         let BtnChange = document.querySelector('.ChangeName_btn')
@@ -140,6 +145,142 @@
             TitleText.innerHTML = "Customized Calculator";
             }
         })
+
+        //Switch Color Name в отдельном файле.
+
+        let BtnReset = document.querySelector('.ResetChangeName_btn')
+
+        BtnReset.addEventListener('click', function (){
+            InputChange.value = "";
+            TitleText.innerHTML = "Customized Calculator";
+            //Очищаем выбор цвет
+
+            if (checkBox_ColorRed.checked){
+                clickEffect_Red.classList.remove('clickEffect_selectColor')
+                Name_Calculator.classList.remove('titleColor_Red')
+            }
+
+            if (checkBox_ColorOrange.checked){
+                clickEffect_Orange.classList.remove('clickEffect_selectColor')
+                Name_Calculator.classList.remove('titleColor_Orange')
+            }
+
+            if (checkBox_ColorYellow.checked){
+                clickEffect_Yellow.classList.remove('clickEffect_selectColor')
+                Name_Calculator.classList.remove('titleColor_Yellow')
+            }
+
+            if (checkBox_ColorGreen.checked){
+                clickEffect_Green.classList.remove('clickEffect_selectColor')
+                Name_Calculator.classList.remove('titleColor_Green')
+            }
+
+            if (checkBox_ColorBlue.checked){
+                clickEffect_Blue.classList.remove('clickEffect_selectColor')
+                Name_Calculator.classList.remove('titleColor_Blue')
+            }
+
+            if (checkBox_ColorDarkBlue.checked){
+                clickEffect_DarkBlue.classList.remove('clickEffect_selectColor')
+                Name_Calculator.classList.remove('titleColor_DarkBlue')
+            }
+
+            if (checkBox_ColorPurple.checked){
+                clickEffect_Purple.classList.remove('clickEffect_selectColor')
+                Name_Calculator.classList.remove('titleColor_Purple')
+            }
+        })
+
+
+
+        //Change Size Buttons
+
+        let sizeSmall_Btn = document.querySelector('.sizeSmall_btn')
+        let sizeMedium_Btn = document.querySelector('.sizeMedium_btn')
+        let sizeLarge_Btn = document.querySelector('.sizeLarge_btn')
+        let button_Proportions = document.querySelectorAll('.button_proportions')
+
+        sizeSmall_Btn.addEventListener('click', function (){
+            button_Proportions.forEach(function (allBtn_Numbers){
+                allBtn_Numbers.classList.toggle('button_Small')
+                allBtn_Numbers.classList.remove('button_Medium')
+                allBtn_Numbers.classList.remove('button_Large')
+            })
+        })
+        sizeMedium_Btn.addEventListener('click', function (){
+            button_Proportions.forEach(function (allBtn_Numbers){
+                allBtn_Numbers.classList.toggle('button_Medium')
+                allBtn_Numbers.classList.remove('button_Small')
+                allBtn_Numbers.classList.remove('button_Large')
+            })
+        })
+        sizeLarge_Btn.addEventListener('click', function (){
+            button_Proportions.forEach(function (allBtn_Numbers){
+                allBtn_Numbers.classList.toggle('button_Large')
+                allBtn_Numbers.classList.remove('button_Small')
+                allBtn_Numbers.classList.remove('button_Medium')
+            })
+        })
+
+
+        //reset style buttons
+
+
+
+
+        //     //Очищаем выбор цвета
+        //     checkBox_ColorRedBtn.checked = false;
+        //     checkBox_ColorBlueBtn.checked = false;
+        //     checkBox_ColorPurpleBtn.checked = false;
+        //     checkBox_ColorYellowBtn.checked = false;
+        //     checkBox_ColorOrangeBtn.checked = false;
+        //     checkBox_ColorGreenBtn.checked = false;
+        // })
+        //
+
+
+
+
+        let ResetStyleButton_btn = document.querySelector('.ResetButtonSettings_btn')
+
+        ResetStyleButton_btn.addEventListener('click', function (){
+
+                clickEffect_YellowBtn.classList.remove('clickEffect_selectColor');
+                clickEffect_RedBtn.classList.remove('clickEffect_selectColor');
+                clickEffect_GreenBtn.classList.remove('clickEffect_selectColor');
+                clickEffect_BlueBtn.classList.remove('clickEffect_selectColor');
+                clickEffect_DarkBlueBtn.classList.remove('clickEffect_selectColor');
+                clickEffect_PurpleBtn.classList.remove('clickEffect_selectColor');
+                clickEffect_OrangeBtn.classList.remove('clickEffect_selectColor');
+                ProportionsBtn.forEach(function (BtnAll){
+                    BtnAll.classList.remove('BtnColor_Green')
+                    BtnAll.classList.remove('BtnColor_Blue')
+                    BtnAll.classList.remove('BtnColor_DarkBlue')
+                    BtnAll.classList.remove('BtnColor_Purple')
+                    BtnAll.classList.remove('BtnColor_Yellow')
+                    BtnAll.classList.remove('BtnColor_Orange')
+                    BtnAll.classList.remove('BtnColor_Red')
+
+
+                });
+
+            checkBox_ColorGreenBtn.checked = false;
+            checkBox_ColorBlueBtn.checked = false;
+            checkBox_ColorDarkBlueBtn.checked = false;
+            checkBox_ColorPurpleBtn.checked = false;
+            checkBox_ColorYellowBtn.checked = false;
+            checkBox_ColorOrangeBtn.checked = false;
+            checkBox_ColorRedBtn.checked = false;
+
+            button_Proportions.forEach(function (allBtn_Numbers){
+                allBtn_Numbers.classList.remove('button_Medium')
+                allBtn_Numbers.classList.remove('button_Small')
+                allBtn_Numbers.classList.remove('button_Large')
+            })
+
+        });
+
+
 
 
 
@@ -165,5 +306,4 @@
                 checkboxTheme_Dark.disabled = false;
             }
         })
-
 
