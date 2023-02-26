@@ -103,6 +103,39 @@
            inputfield.classList.toggle('input_darkmode')
            settingbutton_DarkTheme.classList.toggle('setting_buttonDarkTheme')
 
+           //Clear BG Settings
+
+           document.body.style.backgroundImage = ""
+           backgroundImageInput.value = null
+
+           Title_BG.classList.remove('tileBG_')
+           textVersion_BG.classList.remove('backgroundSettings_color')
+           textIntarface_ThemeBG.classList.remove('backgroundSettings_color')
+           textDarkModeBG.classList.remove('backgroundSettings_color')
+           textAnimeThemeBG.classList.remove('backgroundSettings_color')
+           textNameChangeBG.classList.remove('backgroundSettings_color')
+           textSelectColorBG.classList.remove('backgroundSettings_color')
+           textChangeButtonsBG.classList.remove('backgroundSettings_color')
+           textSelectSizeNumbersBG.classList.remove('backgroundSettings_color')
+           textSelectColorBtnBG.classList.remove('backgroundSettings_color')
+           textChangeBackgroundBG.classList.remove('backgroundSettings_color')
+           textStroke.classList.remove('backgroundSettings_color')
+           text_InputFieldsBG.classList.remove('backgroundSettings_color')
+           backgroundButtonsBG.classList.remove('backgroundSettings_color')
+
+           InputFieldBG.style.backgroundImage = ""
+           backgroundImageInputField.value = null
+
+           InputFieldBG.classList.remove('InputField_Customized')
+
+
+           for (let i = 0; i < buttonsBG.length; i++) {
+               buttonsBG[i].classList.remove('customized-button');
+               buttonsBG[i].classList.remove('numbers_colorCustom');
+               buttonsBG[i].style.backgroundImage = ""
+               backgroundButtons_change.value = null
+           }
+
         })
 
         //Anime Theme
@@ -117,6 +150,15 @@
         let text_InterfaceAnime = document.querySelector('.text_interfaceTheme')
         let text_DarkTheme_Anime = document.querySelector('.text_Darkmode')
         let text_AnimeTheme = document.querySelector('.text_anime')
+        let text_NameChangeAnime = document.querySelector('.change_nameText')
+        let text_selectcolor_Anime = document.querySelector('.select_colorText')
+        let text_Stroke_Anime = document.querySelector('.AddShadow_text')
+        let text_ChangeButtons_Anime = document.querySelector('.change_ButtonsText')
+        let text_Selectsizenumber_Anime = document.querySelector('.select_SizeButton_Text')
+        let text_Selectbuttonscolor_Anime = document.querySelector('.select_colorButton')
+        let text_changeBackground_Anime = document.querySelector('.changeBackground_Text')
+        let text_ChangeInputFieldBG_Anime = document.querySelector('.changeInputField_Text')
+        let text_buttonbackgroundBG_Anime = document.querySelector('.text_backgroundBtn')
         anime_checkbox.addEventListener("click", function (){
             anime_bodyTheme.classList.toggle('anime_bodyTheme')
             button_anime.forEach(function (button_anime){
@@ -130,6 +172,48 @@
             text_InterfaceAnime.classList.toggle('themeIntefaceText_AnimeFont')
             text_DarkTheme_Anime.classList.toggle('themeIntefaceText_AnimeFont')
             text_AnimeTheme.classList.toggle('themeIntefaceText_AnimeFont')
+            text_NameChangeAnime.classList.toggle('themeIntefaceText_AnimeFont')
+            text_selectcolor_Anime.classList.toggle('themeIntefaceText_AnimeFont')
+            text_Stroke_Anime.classList.toggle('themeIntefaceText_AnimeFont')
+            text_ChangeButtons_Anime.classList.toggle('themeIntefaceText_AnimeFont')
+            text_Selectsizenumber_Anime.classList.toggle('themeIntefaceText_AnimeFont')
+            text_Selectbuttonscolor_Anime.classList.toggle('themeIntefaceText_AnimeFont')
+            text_changeBackground_Anime.classList.toggle('themeIntefaceText_AnimeFont')
+            text_ChangeInputFieldBG_Anime.classList.toggle('themeIntefaceText_AnimeFont')
+            text_buttonbackgroundBG_Anime.classList.toggle('themeIntefaceText_AnimeFont')
+
+            //Clear BG settings
+            document.body.style.backgroundImage = ""
+            backgroundImageInput.value = null
+
+            Title_BG.classList.remove('tileBG_')
+            textVersion_BG.classList.remove('backgroundSettings_color')
+            textIntarface_ThemeBG.classList.remove('backgroundSettings_color')
+            textDarkModeBG.classList.remove('backgroundSettings_color')
+            textAnimeThemeBG.classList.remove('backgroundSettings_color')
+            textNameChangeBG.classList.remove('backgroundSettings_color')
+            textSelectColorBG.classList.remove('backgroundSettings_color')
+            textChangeButtonsBG.classList.remove('backgroundSettings_color')
+            textSelectSizeNumbersBG.classList.remove('backgroundSettings_color')
+            textSelectColorBtnBG.classList.remove('backgroundSettings_color')
+            textChangeBackgroundBG.classList.remove('backgroundSettings_color')
+            textStroke.classList.remove('backgroundSettings_color')
+            text_InputFieldsBG.classList.remove('backgroundSettings_color')
+            backgroundButtonsBG.classList.remove('backgroundSettings_color')
+
+            InputFieldBG.style.backgroundImage = ""
+            backgroundImageInputField.value = null
+
+            InputFieldBG.classList.remove('InputField_Customized')
+
+
+            for (let i = 0; i < buttonsBG.length; i++) {
+                buttonsBG[i].classList.remove('customized-button');
+                buttonsBG[i].classList.remove('numbers_colorCustom');
+                buttonsBG[i].style.backgroundImage = ""
+                backgroundButtons_change.value = null
+            }
+
         })
 
 
@@ -146,6 +230,15 @@
             }
         })
 
+
+        //Text Stroke
+
+        let textStroke_checkbox = document.getElementById('textStroke')
+        let Title_Stroke = document.querySelector('.title')
+        textStroke_checkbox.addEventListener('click', function (){
+            Title_Stroke.classList.toggle('text_Stroke')
+        })
+
         //Switch Color Name в отдельном файле.
 
         let BtnReset = document.querySelector('.ResetChangeName_btn')
@@ -153,6 +246,14 @@
         BtnReset.addEventListener('click', function (){
             InputChange.value = "";
             TitleText.innerHTML = "Customized Calculator";
+
+            //Clear Text Stroke
+            if (textStroke_checkbox.checked) {
+                textStroke_checkbox.checked = false
+                Title_Stroke.classList.remove('text_Stroke')
+            }
+
+
             //Очищаем выбор цвет
 
             if (checkBox_ColorRed.checked){
@@ -189,6 +290,34 @@
                 clickEffect_Purple.classList.remove('clickEffect_selectColor')
                 Name_Calculator.classList.remove('titleColor_Purple')
             }
+
+            checkBox_ColorRed.checked = false
+            clickEffect_Red.classList.remove('clickEffect_selectColor')
+            Name_Calculator.classList.remove('titleColor_Red')
+
+            checkBox_ColorOrange.checked = false
+            clickEffect_Orange.classList.remove('clickEffect_selectColor')
+            Name_Calculator.classList.remove('titleColor_Orange')
+
+            checkBox_ColorYellow.checked = false
+            clickEffect_Yellow.classList.remove('clickEffect_selectColor')
+            Name_Calculator.classList.remove('titleColor_Yellow')
+
+            checkBox_ColorBlue.checked = false
+            clickEffect_Blue.classList.remove('clickEffect_selectColor')
+            Name_Calculator.classList.remove('titleColor_Blue')
+
+            checkBox_ColorDarkBlue.checked = false
+            clickEffect_DarkBlue.classList.remove('clickEffect_selectColor')
+            Name_Calculator.classList.remove('titleColor_DarkBlue')
+
+            checkBox_ColorPurple.checked = false
+            clickEffect_Purple.classList.remove('clickEffect_selectColor')
+            Name_Calculator.classList.remove('titleColor_Purple')
+
+            checkBox_ColorGreen.checked = false
+            clickEffect_Green.classList.remove('clickEffect_selectColor')
+            Name_Calculator.classList.remove('titleColor_Green')
         })
 
 
@@ -280,6 +409,148 @@
 
         });
 
+        //Change Background
+
+        let backgroundImageInput = document.getElementById('backgroundImageInput');
+        let Title_BG = document.querySelector('.title')
+        let textVersion_BG = document.querySelector('.text_version')
+        let textIntarface_ThemeBG = document.querySelector('.text_interfaceTheme')
+        let textDarkModeBG = document.querySelector('.text_Darkmode')
+        let textStroke = document.querySelector('.AddShadow_text')
+        let textAnimeThemeBG = document.querySelector('.text_anime')
+        let textNameChangeBG = document.querySelector('.change_nameText')
+        let textSelectColorBG = document.querySelector('.select_colorText')
+        let textChangeButtonsBG = document.querySelector('.change_ButtonsText')
+        let textSelectSizeNumbersBG = document.querySelector('.select_SizeButton_Text')
+        let textSelectColorBtnBG = document.querySelector('.select_colorButton')
+        let textChangeBackgroundBG = document.querySelector('.changeBackground_Text')
+        let text_InputFieldsBG = document.querySelector('.changeInputField_Text')
+        let backgroundButtonsBG = document.querySelector('.text_backgroundBtn')
+
+        backgroundImageInput.addEventListener('change', handleBackgroundImageSelect);
+
+        function handleBackgroundImageSelect(event) {
+            let reader = new FileReader();
+            reader.onload = function () {
+                let backgroundImage = `url(${reader.result})`;
+                document.body.style.background = 'no-repeat center center fixed';
+                document.body.style.backgroundImage = backgroundImage;
+                document.body.style.backgroundSize = 'cover';
+
+                Title_BG.classList.add('tileBG_')
+                textVersion_BG.classList.add('backgroundSettings_color')
+                textIntarface_ThemeBG.classList.add('backgroundSettings_color')
+                textDarkModeBG.classList.add('backgroundSettings_color')
+                textAnimeThemeBG.classList.add('backgroundSettings_color')
+                textNameChangeBG.classList.add('backgroundSettings_color')
+                textSelectColorBG.classList.add('backgroundSettings_color')
+                textChangeButtonsBG.classList.add('backgroundSettings_color')
+                textSelectSizeNumbersBG.classList.add('backgroundSettings_color')
+                textSelectColorBtnBG.classList.add('backgroundSettings_color')
+                textChangeBackgroundBG.classList.add('backgroundSettings_color')
+                textStroke.classList.add('backgroundSettings_color')
+                text_InputFieldsBG.classList.add('backgroundSettings_color')
+                backgroundButtonsBG.classList.add('backgroundSettings_color')
+
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+        //reset background button
+
+        let resetBackground_btn = document.getElementById('reset_BackgroundBtn')
+
+        resetBackground_btn.addEventListener('click', function (){
+            document.body.style.backgroundImage = ""
+            backgroundImageInput.value = null
+
+            Title_BG.classList.remove('tileBG_')
+            textVersion_BG.classList.remove('backgroundSettings_color')
+            textIntarface_ThemeBG.classList.remove('backgroundSettings_color')
+            textDarkModeBG.classList.remove('backgroundSettings_color')
+            textAnimeThemeBG.classList.remove('backgroundSettings_color')
+            textNameChangeBG.classList.remove('backgroundSettings_color')
+            textSelectColorBG.classList.remove('backgroundSettings_color')
+            textChangeButtonsBG.classList.remove('backgroundSettings_color')
+            textSelectSizeNumbersBG.classList.remove('backgroundSettings_color')
+            textSelectColorBtnBG.classList.remove('backgroundSettings_color')
+            textChangeBackgroundBG.classList.remove('backgroundSettings_color')
+            textStroke.classList.remove('backgroundSettings_color')
+            text_InputFieldsBG.classList.remove('backgroundSettings_color')
+            backgroundButtonsBG.classList.remove('backgroundSettings_color')
+        })
+
+
+
+
+        //Change InputField Background
+
+
+
+
+
+        let backgroundImageInputField = document.getElementById('backgroundImageInputFields');
+        let InputFieldBG = document.getElementById('input_fields')
+
+        backgroundImageInputField.addEventListener('change', BGInputField);
+
+        function BGInputField(event) {
+            let reader = new FileReader();
+            reader.onload = function () {
+                let backgroundImageInpt = `url(${reader.result})`;
+                InputFieldBG.style.background = 'no-repeat center center';
+                InputFieldBG.style.backgroundImage = backgroundImageInpt;
+                InputFieldBG.style.backgroundSize = 'cover';
+
+                InputFieldBG.classList.add('InputField_Customized')
+
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        }
+
+        //reset InputField background
+
+        let reset_BackgroundInputField_btn = document.getElementById('reset_BackgroundInputField')
+
+
+        reset_BackgroundInputField_btn.addEventListener('click', function (){
+            InputFieldBG.style.backgroundImage = ""
+            backgroundImageInputField.value = null
+
+            InputFieldBG.classList.remove('InputField_Customized')
+        })
+
+
+
+
+        //Change Buttons backgorund
+
+
+        let buttonsBG = document.querySelectorAll('.button_proportions');
+        let backgroundButtons_change = document.getElementById('backgroundButtonsChange');
+
+        backgroundButtons_change.addEventListener('change', function(event) {
+            let reader = new FileReader();
+            reader.onload = function() {
+                let backgroundButtons_custom = `url(${reader.result})`;
+                for (let i = 0; i < buttonsBG.length; i++) {
+                    buttonsBG[i].classList.add('customized-button');
+                    buttonsBG[i].classList.add('numbers_colorCustom')
+                    buttonsBG[i].style.backgroundImage = backgroundButtons_custom;
+                }
+            };
+            reader.readAsDataURL(event.target.files[0]);
+        });
+
+        let reset_buttonscustom_btn = document.getElementById('ResetButtonSettings_btn');
+        reset_buttonscustom_btn.addEventListener('click', function() {
+            for (let i = 0; i < buttonsBG.length; i++) {
+                buttonsBG[i].classList.remove('customized-button');
+                buttonsBG[i].classList.remove('numbers_colorCustom');
+                buttonsBG[i].style.backgroundImage = ""
+                backgroundButtons_change.value = null
+            }
+        });
 
 
 
@@ -287,7 +558,8 @@
 
 
 
-        //Запрещаем включать другие теми когда одна уже включена
+
+                //Запрещаем включать другие теми когда одна уже включена
         let checkboxTheme_Dark = document.getElementById('darkmode')
         let checkboxTheme_Anime = document.getElementById('anime_theme')
 

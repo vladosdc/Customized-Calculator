@@ -189,7 +189,8 @@ input:checked + .slider:before {
 }
 /*dark_mode setting*/
 body.dark_mode-body{
-    background-color: black;
+    background: url("../img/black_background.jpg") no-repeat center center fixed;
+    background-size: cover;
     color: white;
 }
 
@@ -315,6 +316,11 @@ button.anime_button{
     background: url("../img/button_bakcground.jpg")no-repeat center center local;
     background-size: cover;
     color: black;
+    text-shadow:
+            -1px -1px 0 white, /* тень слева сверху */
+            1px -1px 0 white,  /* тень справа сверху */
+            -1px 1px 0 white,  /* тень слева снизу */
+            1px 1px 0 white;   /* тень справа снизу */
     font-weight: bold;
     border: 2px solid hotpink;
     font-size: 20px;
@@ -387,6 +393,7 @@ input.anime_inputField{
     font-size: 15px;
 }
 .themeIntefaceText_AnimeFont {
+    font-size: 18px;
     font-family: AnimeTheme_Font, sans-serif;
     text-shadow:
             -1px -1px 0 #000, /* тень слева сверху */
@@ -446,19 +453,20 @@ input.anime_inputField{
 }
 
 .ChangeName_btn {
-    width: 100px;
-    height: 40px;
+    width: 85px;
+    height: 30px;
     text-decoration: none;
     display: inline-block;
 
-    margin: 8px 20px;
+    margin-top: 15px;
+    margin-bottom: 5px;
     border-radius: 30px;
     background-color: rgba(46, 229, 157, 1.0);
     background-position: 100% 0;
     font-family: 'Main_Font', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     color: white;
-    box-shadow: 0 1px 15px 0 rgba(0, 40, 120, .35);
+    box-shadow: 0 1px 7px 0 rgba(0, 40, 120, .35);
     transition: .5s;
     border: 0px;
 }
@@ -467,7 +475,10 @@ input.anime_inputField{
     background-position: 0 0;
 }
 .change_nameText{
-    font-size: 18px;
+    font-size: 20px;
+}
+.change_ButtonsText{
+    font-size: 20px;
 }
 /*Select color */
 .ResetChangeName_btn {
@@ -476,7 +487,8 @@ input.anime_inputField{
     text-decoration: none;
     display: inline-block;
 
-    margin: 10px 20px;
+    margin-top: 25px;
+    margin-bottom: 10px;
     border-radius: 30px;
     background-color: rgba(230,0,35,1);
     background-position: 100% 0;
@@ -866,8 +878,84 @@ input.anime_inputField{
     color: purple;
 }
 
+.text_Stroke{
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+
 
 /*--End select color--*/
+
+
+
+
+/*TextStroke switcher setting*/
+
+
+.switch_textStroke {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switch_textStroke {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+}
+
+.switch_textStroke input {display:none;}
+
+.slidertextStroke {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slidertextStroke:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slidertextStroke {
+    background-color: darkslategrey;
+}
+
+input:focus + .slidertextStroke {
+    box-shadow: 0 0 1px darkslategrey;
+}
+
+input:checked + .slidertextStroke:before {
+    -webkit-transform: translateX(23px);
+    -ms-transform: translateX(23px);
+    transform: translateX(23px);
+}
+
+.slidertextStroke.roundtextStroke {
+    border-radius: 34px;
+}
+
+.slidertextStroke.roundtextStroke:before {
+    border-radius: 50%;
+}
+
+
 
 
 /*style size button*/
@@ -1006,6 +1094,285 @@ button.BtnColor_Purple {
     box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
     background-position: 0 0;
 }
+
+/*Change Background */
+
+.changeBackground_Text{
+    font-size: 20px;
+}
+
+.file-upload {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.file-upload input[type='file'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    appearance: none; /* Скрытие стандартного внешнего вида элемента */
+}
+
+.button-text {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+.file-upload {
+
+    width: 130px;
+    height: 25px;
+    text-decoration: none;
+    margin: 8px 20px;
+    border-radius: 25px;
+    background-color: rgba(46, 229, 157, 1.0);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 1px 15px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+
+.file-upload:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+
+
+.reset_BackgroundBtn {
+    width: 80px;
+    height: 30px;
+    text-decoration: none;
+    display: inline-block;
+
+    margin: 10px 20px;
+    border-radius: 30px;
+    background-color: rgba(230,0,35,1);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 18px;
+    color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.reset_BackgroundBtn:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+
+.backgroundSettings_color{
+    font-family: Main_Font, sans-serif;
+    color: white;
+    font-size: 18px;
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+.tileBG_{
+    font-family: Main_Font, sans-serif;
+    color: white;
+    font-size: 32px;
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+
+
+
+/*Change Input Fields */
+
+.changeInputField_Text{
+    font-size: 20px;
+}
+
+.file-upload_Inputfields {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.file-upload_Inputfields input[type='file'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    appearance: none; /* Скрытие стандартного внешнего вида элемента */
+}
+
+.button-text_inputFields {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+.file-upload_Inputfields {
+
+    width: 130px;
+    height: 25px;
+    text-decoration: none;
+    margin: 8px 20px;
+    border-radius: 25px;
+    background-color: rgba(46, 229, 157, 1.0);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 1px 15px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+
+.file-upload_Inputfields:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+
+.InputField_Customized {
+    font-size: 18px;
+    color: white;
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+.InputField_Customized::placeholder {
+    font-size: 18px;
+    color: white;
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+
+
+/*Change buttons background*/
+
+
+
+
+
+.customized-button {
+    background: no-repeat center center;
+    background-size: cover;
+}
+
+
+.numbers_colorCustom{
+    font-size: 18px;
+    color: white;
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+
+
+
+
+.file-upload_buttonsBG {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.file-upload_buttonsBG input[type='file'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    appearance: none; /* Скрытие стандартного внешнего вида элемента */
+}
+
+.button-text_bthchangesBG {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+.file-upload_buttonsBG {
+
+    width: 130px;
+    height: 25px;
+    text-decoration: none;
+    margin: 8px 20px;
+    border-radius: 25px;
+    background-color: rgba(46, 229, 157, 1.0);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 1px 15px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+
+.file-upload_buttonsBG:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+
+/*.InputField_Customized {*/
+/*    font-size: 18px;*/
+/*    color: white;*/
+/*    text-shadow:*/
+/*            -1px -1px 0 #000, !* тень слева сверху *!*/
+/*            1px -1px 0 #000,  !* тень справа сверху *!*/
+/*            -1px 1px 0 #000,  !* тень слева снизу *!*/
+/*            1px 1px 0 #000;   !* тень справа снизу *!*/
+/*}*/
+/*.InputField_Customized::placeholder {*/
+/*    font-size: 18px;*/
+/*    color: white;*/
+/*    text-shadow:*/
+/*            -1px -1px 0 #000, !* тень слева сверху *!*/
+/*            1px -1px 0 #000,  !* тень справа сверху *!*/
+/*            -1px 1px 0 #000,  !* тень слева снизу *!*/
+/*            1px 1px 0 #000;   !* тень справа снизу *!*/
+/*}*/
+
+
+
+
 
 
 

@@ -1,7 +1,7 @@
 <!-- !-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
 <!DOCTYPE html>
 <!-- Оболочка документа, указываем язык содержимого -->
-<html lang="ru">
+<html lang="us">
 	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
 	<head>
 		<!-- Заголовок страницы в браузере -->
@@ -21,7 +21,7 @@
 		<div class="wrapper dark_mode">
 		<h1 class="title">Customized Calculator</h1>
 			<div class="title_version">
-				<p class="text_version">Version 1.5</p>
+				<p class="text_version">Version 1.6</p>
 			</div>
 		<div class="calculator">
 			<div class="flex_calc">
@@ -85,8 +85,9 @@
 					</div>
 					<p class="Customized_SettingsText animationRainbow">Customized Settings</p>
 					<div class="change_titleBlock">
-						<p class="change_nameText">Name</p>
+						<p class="change_nameText">Change Name</p>
 						<input type="text" id="change_nameInput" class="ChangeName_Input" placeholder="Customized Calculator" maxlength="60">
+						<button class="ChangeName_btn">Change</button>
 						<p class="select_colorText">Select name color</p>
 						<div class="select_colorBlock">
 						<label class="switchColor_Red">
@@ -118,14 +119,20 @@
 								<span class="sliderColor_Purple roundColor_Purple"></span>
 							</label>
 						</div>
+						<p class="AddShadow_text">Text stroke</p>
+						<label class="switch_textStroke">
+							<input type="checkbox" id="textStroke">
+							<span class="slidertextStroke roundtextStroke"></span>
+						</label>
+
 						<button class="ResetChangeName_btn">Reset</button>
-						<button class="ChangeName_btn">Change</button>
+
 
 
 <!--						Button Settings -->
 
 
-						<p class="change_nameText">Buttons</p>
+						<p class="change_ButtonsText">Buttons Settings</p>
 						<p class="select_SizeButton_Text">Select size numbers</p>
 						<div class="buttonSize_block">
 							<button class="sizeSmall_btn">Small</button>
@@ -133,7 +140,7 @@
 							<button class="sizeLarge_btn">Large</button>
 						</div>
 
-						<p class="select_colorText">Select buttons color</p>
+						<p class="select_colorButton">Select buttons color</p>
 						<div class="select_colorBlock">
 							<label class="switchColor_Red">
 								<input type="checkbox" id="switcherColor_RedBtn">
@@ -164,8 +171,31 @@
 								<span class="sliderColor_Purple roundColor_Purple"></span>
 							</label>
 						</div>
-						<button class="ResetButtonSettings_btn">Reset</button>
 
+						<p class="text_backgroundBtn">Button background</p>
+						<label for="backgroundButtonsChange" class="file-upload_buttonsBG">
+							<span class="button-text_bthchangesBG">Add background</span>
+							<input type="file" id="backgroundButtonsChange" accept="image/*">
+						</label>
+						<button id="ResetButtonSettings_btn" class="ResetButtonSettings_btn">Reset</button>
+
+<!--						Background Change-->
+						<p class="changeBackground_Text">Change Background</p>
+
+						<label for="backgroundImageInput" class="file-upload">
+							<span class="button-text">Add background</span>
+							<input type="file" id="backgroundImageInput" accept="image/*">
+						</label>
+						<button class="reset_BackgroundBtn" id="reset_BackgroundBtn">Reset</button>
+
+<!--                        Input Field -->
+						<p class="changeInputField_Text">Input fields</p>
+
+						<label for="backgroundImageInputFields" class="file-upload_Inputfields">
+							<span class="button-text_inputFields">Add background</span>
+							<input type="file" id="backgroundImageInputFields" accept="image/*">
+						</label>
+						<button class="reset_BackgroundBtn" id="reset_BackgroundInputField">Reset</button>
 
 					</div>
 				</div>

@@ -9,6 +9,13 @@ checkBox_ColorRed.addEventListener('click', function (){
     clickEffect_Red.classList.toggle('clickEffect_selectColor')
     Name_Calculator.classList.toggle('titleColor_Red')
 
+    //Clear BG Settings
+
+    Title_BG.classList.remove('tileBG_')
+
+    //--END--
+
+
     if (checkBox_ColorOrange.checked){
         clickEffect_Orange.classList.remove('clickEffect_selectColor')
         Name_Calculator.classList.remove('titleColor_Orange')
@@ -75,6 +82,15 @@ let clickEffect_Orange = document.querySelector('.sliderColor_Orange')
 checkBox_ColorOrange.addEventListener('click', function (){
     clickEffect_Orange.classList.toggle('clickEffect_selectColor')
     Name_Calculator.classList.toggle('titleColor_Orange')
+
+
+    //Clear BG Settings
+
+    Title_BG.classList.remove('tileBG_')
+
+    //--END--
+
+
 
     if (checkBox_ColorRed.checked){
         clickEffect_Red.classList.remove('clickEffect_selectColor')
@@ -143,6 +159,14 @@ checkBox_ColorYellow.addEventListener('click', function (){
     clickEffect_Yellow.classList.toggle('clickEffect_selectColor')
     Name_Calculator.classList.toggle('titleColor_Yellow')
 
+    //Clear BG Settings
+
+    Title_BG.classList.remove('tileBG_')
+
+    //--END--
+
+
+
     if (checkBox_ColorRed.checked){
         clickEffect_Red.classList.remove('clickEffect_selectColor')
         Name_Calculator.classList.remove('titleColor_Red')
@@ -210,6 +234,14 @@ let clickEffect_Green = document.querySelector('.sliderColor_Green')
 checkBox_ColorGreen.addEventListener('click', function (){
     clickEffect_Green.classList.toggle('clickEffect_selectColor')
     Name_Calculator.classList.toggle('titleColor_Green')
+
+    //Clear BG Settings
+
+    Title_BG.classList.remove('tileBG_')
+
+    //--END--
+
+
     if (checkBox_ColorRed.checked){
         clickEffect_Red.classList.remove('clickEffect_selectColor')
         Name_Calculator.classList.remove('titleColor_Red')
@@ -279,6 +311,14 @@ checkBox_ColorBlue.addEventListener('click', function (){
     clickEffect_Blue.classList.toggle('clickEffect_selectColor')
     Name_Calculator.classList.toggle('titleColor_Blue')
 
+    //Clear BG Settings
+
+    Title_BG.classList.remove('tileBG_')
+
+    //--END--
+
+
+
     if (checkBox_ColorRed.checked){
         clickEffect_Red.classList.remove('clickEffect_selectColor')
         Name_Calculator.classList.remove('titleColor_Red')
@@ -343,6 +383,14 @@ let clickEffect_DarkBlue = document.querySelector('.sliderColor_DarkBlue')
 checkBox_ColorDarkBlue.addEventListener('click', function (){
     clickEffect_DarkBlue.classList.toggle('clickEffect_selectColor')
     Name_Calculator.classList.toggle('titleColor_DarkBlue')
+
+    //Clear BG Settings
+
+    Title_BG.classList.remove('tileBG_')
+
+    //--END--
+
+
 
     if (checkBox_ColorRed.checked){
         clickEffect_Red.classList.remove('clickEffect_selectColor')
@@ -409,6 +457,14 @@ let clickEffect_Purple = document.querySelector('.sliderColor_Purple')
 checkBox_ColorPurple.addEventListener('click', function (){
     clickEffect_Purple.classList.toggle('clickEffect_selectColor')
     Name_Calculator.classList.toggle('titleColor_Purple')
+
+    //Clear BG Settings
+
+    Title_BG.classList.remove('tileBG_')
+
+    //--END--
+
+
 
     if (checkBox_ColorDarkBlue.checked){
         clickEffect_DarkBlue.classList.remove('clickEffect_selectColor')
