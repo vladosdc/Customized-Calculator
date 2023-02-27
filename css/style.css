@@ -14,6 +14,10 @@ button{
     font-family: Main_Font, sans-serif;
 }
 
+.Message_deviceNotSupport{
+    display: none;
+}
+
 .calculator{
     margin-top: 80px;
     display: flex;
@@ -53,6 +57,7 @@ text-align: center;
     margin-top: 40px;
     margin-left: 5px;
     color: red;
+    font-size: 14px;
 
 }
 .img_error{
@@ -347,7 +352,7 @@ input.anime_inputField{
     background: url("../img/inputField_anime.gif") ;
     background-size: cover;
     font-weight: bold;
-    font-size: 23px;
+    font-size: 20px;
     border: 2px solid hotpink;
     color: white;
     text-shadow:
@@ -390,7 +395,7 @@ input.anime_inputField{
     margin-top: 43px;
     margin-left: 5px;
     color: red;
-    font-size: 15px;
+    font-size: 14px;
 }
 .themeIntefaceText_AnimeFont {
     font-size: 18px;
@@ -1351,29 +1356,32 @@ button.BtnColor_Purple {
     background-position: 0 0;
 }
 
-/*.InputField_Customized {*/
-/*    font-size: 18px;*/
-/*    color: white;*/
-/*    text-shadow:*/
-/*            -1px -1px 0 #000, !* тень слева сверху *!*/
-/*            1px -1px 0 #000,  !* тень справа сверху *!*/
-/*            -1px 1px 0 #000,  !* тень слева снизу *!*/
-/*            1px 1px 0 #000;   !* тень справа снизу *!*/
-/*}*/
-/*.InputField_Customized::placeholder {*/
-/*    font-size: 18px;*/
-/*    color: white;*/
-/*    text-shadow:*/
-/*            -1px -1px 0 #000, !* тень слева сверху *!*/
-/*            1px -1px 0 #000,  !* тень справа сверху *!*/
-/*            -1px 1px 0 #000,  !* тень слева снизу *!*/
-/*            1px 1px 0 #000;   !* тень справа снизу *!*/
-/*}*/
 
 
+/*Reset All button*/
 
+.ResetAll_btn {
+    width: 150px;
+    height: 45px;
+    text-decoration: none;
+    display: inline-block;
 
-
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    background-color: rgba(230,0,35,1);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 22px;
+    color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.ResetAll_btn:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
 
 
 
@@ -1386,5 +1394,55 @@ button.BtnColor_Purple {
 }
 .calculator{
         margin-top: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 250px) {
+    body * {
+        display: none;
+    }
+    .Message_deviceNotSupport{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 24px;
+        color: red;
+        text-align: center;
+        font-weight: bold;
+
+    }
+}
+@media only screen and (max-width: 135px) {
+    body * {
+        display: none;
+    }
+    .Message_deviceNotSupport{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 15px;
+        color: red;
+        text-align: center;
+        font-weight: bold;
+
+    }
+}
+@media only screen and (max-width: 85px) {
+    body * {
+        display: none;
+    }
+    .Message_deviceNotSupport{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 10px;
+        color: red;
+        text-align: center;
+        font-weight: bold;
+
     }
 }

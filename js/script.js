@@ -351,25 +351,6 @@
             })
         })
 
-
-        //reset style buttons
-
-
-
-
-        //     //Очищаем выбор цвета
-        //     checkBox_ColorRedBtn.checked = false;
-        //     checkBox_ColorBlueBtn.checked = false;
-        //     checkBox_ColorPurpleBtn.checked = false;
-        //     checkBox_ColorYellowBtn.checked = false;
-        //     checkBox_ColorOrangeBtn.checked = false;
-        //     checkBox_ColorGreenBtn.checked = false;
-        // })
-        //
-
-
-
-
         let ResetStyleButton_btn = document.querySelector('.ResetButtonSettings_btn')
 
         ResetStyleButton_btn.addEventListener('click', function (){
@@ -522,7 +503,6 @@
 
 
 
-
         //Change Buttons backgorund
 
 
@@ -554,12 +534,7 @@
 
 
 
-
-
-
-
-
-                //Запрещаем включать другие теми когда одна уже включена
+        //Запрещаем включать другие теми когда одна уже включена
         let checkboxTheme_Dark = document.getElementById('darkmode')
         let checkboxTheme_Anime = document.getElementById('anime_theme')
 
@@ -577,5 +552,12 @@
             } else {
                 checkboxTheme_Dark.disabled = false;
             }
+        })
+
+        //Reset All button
+
+        let resetAllBtn = document.querySelector('.ResetAll_btn')
+        resetAllBtn.addEventListener('click', function (){
+            location.reload()
         })
 
