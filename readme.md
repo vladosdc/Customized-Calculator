@@ -36,7 +36,6 @@ V 1.6 - Improving the customization possibilities
 
 V 1.7 - Final version (the last version of the calculator, everything I wanted was added to the calculator, I learned a lot. So this is the logical conclusion of this project)
 
-Translated with www.DeepL.com/Translator (free version)
 
 
 ## Ukraine Translate
@@ -78,7 +77,6 @@ V 1.6 - Удосконалення можливостей кастомізаці
 
 V 1.7 - Фінальна версія (остання версія калькулятора, до калькулятора було додано все що я хотів, я навчився багато чому. Тому це логічне завершення даного проекту)
 
-Translated with www.DeepL.com/Translator (free version)
 
 
 ## Russian Translate
