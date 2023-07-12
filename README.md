@@ -2,7 +2,7 @@
 
 ### Stack: JavaScript, CSS, HTML.
 
-
+### Demo - https://vladosdc.github.io/Customized-Calculator/
 
 Don't like the color of the button or do you prefer an anime theme?
 So customize the calculator however you want!

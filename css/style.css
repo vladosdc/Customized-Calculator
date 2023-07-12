@@ -95,6 +95,7 @@ text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .reset_button{
     width: 108px;
