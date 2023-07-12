@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="us">
+	<head>
+		<title>Customized Calculator</title>
+		<link rel="stylesheet" href="css/style.css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+		<link rel="shortcut icon" href="img/Custom_CalculatorIcon.png" type="image/x-icon">
+
+	</head>
+	<body >
+	<main>
+		<div class="wrapper dark_mode">
+		<h1 class="title">Customized Calculator</h1>
+			<div class="title_version">
+				<p class="text_version">Version 1.7</p>
+			</div>
+		<div class="calculator">
+			<div class="flex_calc">
+				<div class="error_message" id="error-message">
+				</div>
+				<input type="text" id="input_fields" class="input_fields" placeholder="0">
+
+
+				<div class="numbersAndMathOperators">
+					<div class="row">
+					<button class="button_proportions reset_button" id="reset">AC</button>
+					<button class="button_proportions" id="sin_button">sin</button>
+					<button class="button_proportions" id="math_operator">%</button>
+					</div>
+					<div class="row">
+				 <button class="button_proportions" id="number">7</button>
+					<button class="button_proportions" id="number">8</button>
+					<button class="button_proportions" id="number">9</button>
+					<button class="button_proportions" id="math_operator">+</button>
+					</div>
+					<div class="row">
+						<button class="button_proportions" id="number">4</button>
+						<button class="button_proportions" id="number">5</button>
+						<button class="button_proportions" id="number">6</button>
+						<button class="button_proportions" id="math_operator">-</button>
+					</div>
+					<div class="row">
+						<button class="button_proportions" id="number">1</button>
+						<button class="button_proportions" id="number">2</button>
+						<button class="button_proportions" id="number">3</button>
+						<button class="button_proportions" id="math_operator">*</button>
+					</div>
+					<div class="row">
+						<button class="button_proportions" id="number">0</button>
+						<button class="button_proportions" id="math_operator">.</button>
+						<button class="button_proportions" id="math_operator">/</button>
+						<button class="button_proportions" id="operator_equals">=</button>
+					</div>
+				</div>
+					<div class="setting_block">
+						<button class="setting_button">
+						<p class="settings_text">Settings</p>
+						<img class="img_setting" src="img/icon_settings.png" alt="Setting Icon">
+						</button>
+					</div>
+				<div class="Customized_menu menuCustom">
+					<p class="text_interfaceTheme">Interface Theme</p>
+					<div class="theme_block">
+						<p class="text_Darkmode">Dark</p>
+						<label class="switch">
+							<input type="checkbox" id="darkmode">
+							<span class="slider round"></span>
+						</label>
+					</div>
+					<div class="theme_block">
+						<p class="text_anime">Anime</p>
+						<label class="switch_anime">
+							<input type="checkbox" id="anime_theme">
+							<span class="slideranime roundanime"></span>
+						</label>
+					</div>
+					<p class="Customized_SettingsText animationRainbow">Customized Settings</p>
+					<div class="change_titleBlock">
+						<p class="change_nameText">Change Name</p>
+						<input type="text" id="change_nameInput" class="ChangeName_Input" placeholder="Customized Calculator" maxlength="60">
+						<button class="ChangeName_btn">Change</button>
+						<p class="select_colorText">Select name color</p>
+						<div class="select_colorBlock">
+						<label class="switchColor_Red">
+							<input type="checkbox" id="switcherColor_Red">
+							<span class="sliderColor_Red roundColor_Red"></span>
+						</label>
+							<label class="switchColor_Orange">
+								<input type="checkbox" id="switcherColor_Orange">
+								<span class="sliderColor_Orange roundColor_Orange"></span>
+							</label>
+							<label class="switchColor_Yellow">
+								<input type="checkbox" id="switcherColor_Yellow">
+								<span class="sliderColor_Yellow roundColor_Yellow"></span>
+							</label>
+							<label class="switchColor_Green">
+								<input type="checkbox" id="switcherColor_Green">
+								<span class="sliderColor_Green roundColor_Green"></span>
+							</label>
+							<label class="switchColor_Blue">
+								<input type="checkbox" id="switcherColor_Blue">
+								<span class="sliderColor_Blue roundColor_Blue"></span>
+							</label>
+							<label class="switchColor_DarkBlue">
+								<input type="checkbox" id="switcherColor_DarkBlue">
+								<span class="sliderColor_DarkBlue roundColor_DarkBlue"></span>
+							</label>
+							<label class="switchColor_Purple">
+								<input type="checkbox" id="switcherColor_Purple">
+								<span class="sliderColor_Purple roundColor_Purple"></span>
+							</label>
+						</div>
+						<p class="AddShadow_text">Text stroke</p>
+						<label class="switch_textStroke">
+							<input type="checkbox" id="textStroke">
+							<span class="slidertextStroke roundtextStroke"></span>
+						</label>
+
+						<button class="ResetChangeName_btn">Reset</button>
+
+
+
+<!--						Button Settings -->
+
+
+						<p class="change_ButtonsText">Buttons Settings</p>
+						<p class="select_SizeButton_Text">Select size numbers</p>
+						<div class="buttonSize_block">
+							<button class="sizeSmall_btn">Small</button>
+							<button class="sizeMedium_btn">Medium</button>
+							<button class="sizeLarge_btn">Large</button>
+						</div>
+
+						<p class="select_colorButton">Select buttons color</p>
+						<div class="select_colorBlock">
+							<label class="switchColor_Red">
+								<input type="checkbox" id="switcherColor_RedBtn">
+								<span class="sliderColor_Red roundColor_Red"></span>
+							</label>
+							<label class="switchColor_Orange">
+								<input type="checkbox" id="switcherColor_OrangeBtn">
+								<span class="sliderColor_Orange roundColor_Orange"></span>
+							</label>
+							<label class="switchColor_Yellow">
+								<input type="checkbox" id="switcherColor_YellowBtn">
+								<span class="sliderColor_Yellow roundColor_Yellow"></span>
+							</label>
+							<label class="switchColor_Green">
+								<input type="checkbox" id="switcherColor_GreenBtn">
+								<span class="sliderColor_Green roundColor_Green"></span>
+							</label>
+							<label class="switchColor_Blue">
+								<input type="checkbox" id="switcherColor_BlueBtn">
+								<span class="sliderColor_Blue roundColor_Blue"></span>
+							</label>
+							<label class="switchColor_DarkBlue">
+								<input type="checkbox" id="switcherColor_DarkBlueBtn">
+								<span class="sliderColor_DarkBlue roundColor_DarkBlue"></span>
+							</label>
+							<label class="switchColor_Purple">
+								<input type="checkbox" id="switcherColor_PurpleBtn">
+								<span class="sliderColor_Purple roundColor_Purple"></span>
+							</label>
+						</div>
+
+						<p class="text_backgroundBtn">Button background</p>
+						<label for="backgroundButtonsChange" class="file-upload_buttonsBG">
+							<span class="button-text_bthchangesBG">Add background</span>
+							<input type="file" id="backgroundButtonsChange" accept="image/*">
+						</label>
+						<button id="ResetButtonSettings_btn" class="ResetButtonSettings_btn">Reset</button>
+
+<!--						Background Change-->
+						<p class="changeBackground_Text">Change Background</p>
+
+						<label for="backgroundImageInput" class="file-upload">
+							<span class="button-text">Add background</span>
+							<input type="file" id="backgroundImageInput" accept="image/*">
+						</label>
+						<button class="reset_BackgroundBtn" id="reset_BackgroundBtn">Reset</button>
+
+<!--                        Input Field -->
+						<p class="changeInputField_Text">Input fields</p>
+
+						<label for="backgroundImageInputFields" class="file-upload_Inputfields">
+							<span class="button-text_inputFields">Add background</span>
+							<input type="file" id="backgroundImageInputFields" accept="image/*">
+						</label>
+						<button class="reset_BackgroundBtn" id="reset_BackgroundInputField">Reset</button>
+						<button class="ResetAll_btn">Reset All</button>
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		</div>
+	</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.5.1/math.js"></script>
+		<script src="js/switch_color.js"></script>
+		<script src="js/script.js"></script>
+
+
+	</body>
+			<p class="Message_deviceNotSupport">your device is not supported</p>
+	</html>
+

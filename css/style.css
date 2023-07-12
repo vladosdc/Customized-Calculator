@@ -1,0 +1,1448 @@
+
+
+@font-face {
+    font-family: "Main_Font";
+    src: url("../fonts/Lexend-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-family: Main_Font, sans-serif;
+    touch-action: manipulation;
+}
+button{
+    font-family: Main_Font, sans-serif;
+}
+
+.Message_deviceNotSupport{
+    display: none;
+}
+
+.calculator{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+.title{
+text-align: center;
+}
+
+.numbersAndMathOperators{
+    margin-top: 20px;
+}
+.button_proportions{
+    margin: 2px;
+    width: 50px;
+    height: 50px;
+
+}
+
+.input_fields {
+    font-family: Main_Font, sans-serif;
+    border-radius: 10px;
+    width: 218px;
+    height: 60px;
+    text-align: right;
+    font-size: 16px;
+}
+
+.error_message{
+    position: absolute;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 5px;
+    color: red;
+    font-size: 14px;
+
+}
+.img_error{
+    float: left;
+    margin-right: 5px;
+    width: 18px;
+}
+
+
+.button_proportions{
+    border-radius: 10px;
+    color: black;
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+.setting_block{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+
+}
+.img_setting{
+    margin-top: 2px;
+    margin-left: 4px;
+    width: 19px;
+}
+.setting_button{
+    border-radius: 20px;
+    border: 1px solid #000;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reset_button{
+    width: 108px;
+}
+
+/*Cusotmized menu*/
+
+/*Dark Mode menu*/
+
+
+.text_interfaceTheme{
+    font-size: 18px;
+}
+.text_Darkmode{
+    font-size: 18px;
+
+}
+
+.menuCustom{
+    display: none;
+}
+.menuCustom-open{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.theme_block{
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+.switch {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+}
+
+.switch input {display:none;}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: orange;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px orange;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(23px);
+    -ms-transform: translateX(23px);
+    transform: translateX(23px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+/*dark_mode setting*/
+body.dark_mode-body{
+    background: url("../img/black_background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+button.button_darkmode{
+    border-radius: 10px;
+    background-color: grey;
+    color: white;
+    border: 2px solid black;
+    font-size: 16px;
+}
+
+.text_version{
+    opacity: 0.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input_darkmode{
+    background-color: black;
+    border: 2px solid grey;
+    color: white;
+    font-size: 16px;
+}
+.input_darkmode::placeholder{
+    color: white;
+}
+.setting_buttonDarkTheme{
+    background-color: grey;
+    color: white;
+}
+
+/*Anime Theme*/
+
+.text_anime{
+    font-size: 18px;
+}
+
+
+/*Anime switcher setting*/
+
+
+.switch_anime {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switch_anime {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+}
+
+.switch_anime input {display:none;}
+
+.slideranime {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slideranime:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slideranime {
+    background-color: hotpink;
+}
+
+input:focus + .slideranime {
+    box-shadow: 0 0 1px hotpink;
+}
+
+input:checked + .slideranime:before {
+    -webkit-transform: translateX(23px);
+    -ms-transform: translateX(23px);
+    transform: translateX(23px);
+}
+
+.slideranime.roundanime {
+    border-radius: 34px;
+}
+
+.slideranime.roundanime:before {
+    border-radius: 50%;
+}
+
+
+
+/*Anime Theme setting*/
+@font-face {
+    font-family: "AnimeTheme_Font";
+    src: url("../fonts/Anime Ace v3.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+body.anime_bodyTheme{
+    background: url("../img/anime_backgorund.png") no-repeat center center fixed;
+    background-size: cover;
+    color: hotpink;
+    font-weight: bold;
+
+}
+
+
+button.anime_button{
+    font-family: AnimeTheme_Font, sans-serif;
+    border-radius: 15px;
+    background: url("../img/button_bakcground.jpg")no-repeat center center local;
+    background-size: cover;
+    color: black;
+    text-shadow:
+            -1px -1px 0 white, /* тень слева сверху */
+            1px -1px 0 white,  /* тень справа сверху */
+            -1px 1px 0 white,  /* тень слева снизу */
+            1px 1px 0 white;   /* тень справа снизу */
+    font-weight: bold;
+    border: 2px solid hotpink;
+    font-size: 20px;
+}
+
+.text_versionAnimeTheme{
+    font-family: AnimeTheme_Font, sans-serif;
+    opacity: 0.4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titleAnime_Theme{
+    font-family: AnimeTheme_Font, sans-serif;
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+input.anime_inputField{
+    font-family: AnimeTheme_Font, sans-serif;
+    border-radius: 15px;
+    background: url("../img/inputField_anime.gif") ;
+    background-size: cover;
+    font-weight: bold;
+    font-size: 20px;
+    border: 2px solid hotpink;
+    color: white;
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+
+.anime_inputField::placeholder{
+    color: white;
+}
+.setting_buttonAnimeTheme{
+    font-family: AnimeTheme_Font, sans-serif;
+    background: url("../img/setting_buttonAnime.gif") center center;
+    background-size: cover;
+    border-radius: 20px;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid hotpink;
+    color: hotpink;
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+.anime_inputField:focus {
+    outline: none
+}
+
+.error_messageAnime{
+    position: absolute;
+    text-align: center;
+    margin-top: 43px;
+    margin-left: 5px;
+    color: red;
+    font-size: 14px;
+}
+.themeIntefaceText_AnimeFont {
+    font-size: 18px;
+    font-family: AnimeTheme_Font, sans-serif;
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+
+/*---End---*/
+
+
+/*Customized Settings*/
+
+/*Animation Text - Customized Settings */
+
+.Customized_SettingsText{}
+.animationRainbow {
+    background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: rainbow 20s ease infinite;
+    animation: rainbow 20s ease infinite;
+    font-size: 20px;
+    line-height: 45px;
+    font-weight: bold;
+}
+
+@-webkit-keyframes rainbow {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+}
+
+/*---Animation End---*/
+
+.change_titleBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ChangeName_Input{
+    font-family: "Main_Font", sans-serif;
+    padding-left: 5px;
+    width: 150px;
+    height: 30px;
+    margin-left: 4px;
+    border-radius: 15px;
+    border: 2px solid black;
+
+}
+
+.ChangeName_btn {
+    width: 85px;
+    height: 30px;
+    text-decoration: none;
+    display: inline-block;
+
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius: 30px;
+    background-color: rgba(46, 229, 157, 1.0);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 1px 7px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.ChangeName_btn:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+.change_nameText{
+    font-size: 20px;
+}
+.change_ButtonsText{
+    font-size: 20px;
+}
+/*Select color */
+.ResetChangeName_btn {
+    width: 80px;
+    height: 30px;
+    text-decoration: none;
+    display: inline-block;
+
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    background-color: rgba(230,0,35,1);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 18px;
+    color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.ResetChangeName_btn:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+
+
+/*switcher select color*/
+
+
+/*Red*/
+
+.switchColor_Red {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switchColor_Red {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.switchColor_Red input {display:none;}
+
+.sliderColor_Red {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+}
+
+.sliderColor_Red:before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 6px;
+    bottom: 6px;
+    background-color: white;
+    transition: .4s;
+}
+.clickEffect_selectColor:before{
+    transition: .4s;
+    transform: scale(1.4);
+}
+
+.sliderColor_Red.roundColor_Red {
+    border-radius: 34px;
+}
+
+.sliderColor_Red.roundColor_Red:before {
+    border-radius: 50%;
+}
+
+/*Orange*/
+
+
+.switchColor_Orange {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switchColor_Orange {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.switchColor_Orange input {display:none;}
+
+.sliderColor_Orange {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FF6600;
+}
+
+.sliderColor_Orange:before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 6px;
+    bottom: 6px;
+    background-color: white;
+    transition: .4s;
+}
+
+
+.sliderColor_Orange.roundColor_Orange {
+    border-radius: 34px;
+}
+
+.sliderColor_Orange.roundColor_Orange:before {
+    border-radius: 50%;
+}
+
+
+/*Yellow*/
+
+
+
+.switchColor_Yellow {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switchColor_Yellow {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.switchColor_Yellow input {display:none;}
+
+.sliderColor_Yellow {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FFFF33;
+}
+
+.sliderColor_Yellow:before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 6px;
+    bottom: 6px;
+    background-color: white;
+    transition: .4s;
+}
+
+
+.sliderColor_Yellow.roundColor_Yellow {
+    border-radius: 34px;
+}
+
+.sliderColor_Yellow.roundColor_Yellow:before {
+    border-radius: 50%;
+}
+
+
+
+/*Green*/
+
+
+.switchColor_Green {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switchColor_Green {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.switchColor_Green input {display:none;}
+
+.sliderColor_Green {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: green;
+}
+
+.sliderColor_Green:before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 6px;
+    bottom: 6px;
+    background-color: white;
+    transition: .4s;
+}
+
+
+.sliderColor_Green.roundColor_Green {
+    border-radius: 34px;
+}
+
+.sliderColor_Green.roundColor_Green:before {
+    border-radius: 50%;
+}
+
+/*Blue*/
+
+.switchColor_Blue {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switchColor_Blue {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.switchColor_Blue input {display:none;}
+
+.sliderColor_Blue {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: deepskyblue;
+}
+
+.sliderColor_Blue:before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 6px;
+    bottom: 6px;
+    background-color: white;
+    transition: .4s;
+}
+
+
+.sliderColor_Blue.roundColor_Blue {
+    border-radius: 34px;
+}
+
+.sliderColor_Blue.roundColor_Blue:before {
+    border-radius: 50%;
+}
+
+
+/*Dark_Blue*/
+
+.switchColor_DarkBlue {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switchColor_DarkBlue {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.switchColor_DarkBlue input {display:none;}
+
+.sliderColor_DarkBlue {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: blue;
+}
+
+.sliderColor_DarkBlue:before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 6px;
+    bottom: 6px;
+    background-color: white;
+    transition: .4s;
+}
+
+
+.sliderColor_DarkBlue.roundColor_DarkBlue {
+    border-radius: 34px;
+}
+
+.sliderColor_DarkBlue.roundColor_DarkBlue:before {
+    border-radius: 50%;
+}
+
+
+
+/*Purple*/
+
+
+.switchColor_Purple {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switchColor_Purple {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.switchColor_Purple input {display:none;}
+
+.sliderColor_Purple {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: purple;
+}
+
+.sliderColor_Purple:before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 6px;
+    bottom: 6px;
+    background-color: white;
+    transition: .4s;
+}
+
+
+.sliderColor_Purple.roundColor_Purple {
+    border-radius: 34px;
+}
+
+.sliderColor_Purple.roundColor_Purple:before {
+    border-radius: 50%;
+}
+
+/*Title Color Switch*/
+
+
+
+.titleColor_Red{
+    color: red;
+}
+
+
+
+.titleColor_Orange{
+    color: #FF6600;
+}
+
+.titleColor_Yellow{
+    color: #FFFF33;
+}
+
+.titleColor_Green{
+    color: green;
+}
+
+.titleColor_Blue{
+    color: deepskyblue;
+}
+
+.titleColor_DarkBlue{
+    color: blue;
+}
+
+.titleColor_Purple{
+    color: purple;
+}
+
+.text_Stroke{
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+
+
+/*--End select color--*/
+
+
+
+
+/*TextStroke switcher setting*/
+
+
+.switch_textStroke {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switch_textStroke {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+}
+
+.switch_textStroke input {display:none;}
+
+.slidertextStroke {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slidertextStroke:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slidertextStroke {
+    background-color: darkslategrey;
+}
+
+input:focus + .slidertextStroke {
+    box-shadow: 0 0 1px darkslategrey;
+}
+
+input:checked + .slidertextStroke:before {
+    -webkit-transform: translateX(23px);
+    -ms-transform: translateX(23px);
+    transform: translateX(23px);
+}
+
+.slidertextStroke.roundtextStroke {
+    border-radius: 34px;
+}
+
+.slidertextStroke.roundtextStroke:before {
+    border-radius: 50%;
+}
+
+
+
+
+/*style size button*/
+
+.sizeSmall_btn {
+    width: 55px;
+    height: 22px;
+    text-decoration: none;
+    display: inline-block;
+
+
+    border-radius: 30px;
+    background-color: rgba(115,123,129,1);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.sizeSmall_btn:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+.sizeMedium_btn{
+    width: 75px;
+    height: 26px;
+    text-decoration: none;
+    display: inline-block;
+
+
+    border-radius: 30px;
+    background-color: rgba(115,123,129,1);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.sizeMedium_btn:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+.sizeLarge_btn {
+    width: 65px;
+    height: 35px;
+    text-decoration: none;
+    display: inline-block;
+
+
+    border-radius: 30px;
+    background-color: rgba(115,123,129,1);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.sizeLarge_btn:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+
+
+
+
+/*Size Select*/
+
+
+button.button_Small {
+    font-size: 13px;
+}
+button.button_Medium{
+    font-size: 18px;
+}
+button.button_Large{
+    font-size: 21px;
+}
+
+
+
+/*Color Buttons Select*/
+
+
+button.BtnColor_Red{
+    color: red;
+}
+
+button.BtnColor_Orange{
+    color: #FF6600;
+}
+
+button.BtnColor_Yellow{
+color: #FFFF33
+}
+
+button.BtnColor_Green {
+    color: green;
+}
+
+button.BtnColor_Blue {
+    color: deepskyblue;
+}
+
+button.BtnColor_DarkBlue {
+    color: blue;
+}
+
+button.BtnColor_Purple {
+    color: purple;
+}
+
+.ResetButtonSettings_btn {
+    width: 80px;
+    height: 30px;
+    text-decoration: none;
+    display: inline-block;
+
+    margin: 10px 20px;
+    border-radius: 30px;
+    background-color: rgba(230,0,35,1);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 18px;
+    color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.ResetButtonSettings_btn:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+
+/*Change Background */
+
+.changeBackground_Text{
+    font-size: 20px;
+}
+
+.file-upload {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.file-upload input[type='file'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    appearance: none; /* Скрытие стандартного внешнего вида элемента */
+}
+
+.button-text {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+.file-upload {
+
+    width: 130px;
+    height: 25px;
+    text-decoration: none;
+    margin: 8px 20px;
+    border-radius: 25px;
+    background-color: rgba(46, 229, 157, 1.0);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 1px 15px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+
+.file-upload:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+
+
+.reset_BackgroundBtn {
+    width: 80px;
+    height: 30px;
+    text-decoration: none;
+    display: inline-block;
+
+    margin: 10px 20px;
+    border-radius: 30px;
+    background-color: rgba(230,0,35,1);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 18px;
+    color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.reset_BackgroundBtn:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+
+.backgroundSettings_color{
+    font-family: Main_Font, sans-serif;
+    color: white;
+    font-size: 18px;
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+.tileBG_{
+    font-family: Main_Font, sans-serif;
+    color: white;
+    font-size: 32px;
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+
+
+
+/*Change Input Fields */
+
+.changeInputField_Text{
+    font-size: 20px;
+}
+
+.file-upload_Inputfields {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.file-upload_Inputfields input[type='file'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    appearance: none; /* Скрытие стандартного внешнего вида элемента */
+}
+
+.button-text_inputFields {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+.file-upload_Inputfields {
+
+    width: 130px;
+    height: 25px;
+    text-decoration: none;
+    margin: 8px 20px;
+    border-radius: 25px;
+    background-color: rgba(46, 229, 157, 1.0);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 1px 15px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+
+.file-upload_Inputfields:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+
+.InputField_Customized {
+    font-size: 18px;
+    color: white;
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+.InputField_Customized::placeholder {
+    font-size: 18px;
+    color: white;
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+
+
+/*Change buttons background*/
+
+
+
+
+
+.customized-button {
+    background: no-repeat center center;
+    background-size: cover;
+}
+
+
+.numbers_colorCustom{
+    font-size: 18px;
+    color: white;
+    text-shadow:
+            -1px -1px 0 #000, /* тень слева сверху */
+            1px -1px 0 #000,  /* тень справа сверху */
+            -1px 1px 0 #000,  /* тень слева снизу */
+            1px 1px 0 #000;   /* тень справа снизу */
+}
+
+
+
+
+.file-upload_buttonsBG {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.file-upload_buttonsBG input[type='file'] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    appearance: none; /* Скрытие стандартного внешнего вида элемента */
+}
+
+.button-text_bthchangesBG {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+.file-upload_buttonsBG {
+
+    width: 130px;
+    height: 25px;
+    text-decoration: none;
+    margin: 8px 20px;
+    border-radius: 25px;
+    background-color: rgba(46, 229, 157, 1.0);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 16px;
+    color: white;
+    box-shadow: 0 1px 15px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+
+.file-upload_buttonsBG:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+
+
+
+/*Reset All button*/
+
+.ResetAll_btn {
+    width: 150px;
+    height: 45px;
+    text-decoration: none;
+    display: inline-block;
+
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    background-color: rgba(230,0,35,1);
+    background-position: 100% 0;
+    font-family: 'Main_Font', sans-serif;
+    font-size: 22px;
+    color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.ResetAll_btn:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+
+
+
+
+
+/*Adaptive*/
+@media only screen and (max-width: 450px) {
+.title{
+    font-size: 25px;
+}
+.calculator{
+        margin-top: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 250px) {
+    body * {
+        display: none;
+    }
+    .Message_deviceNotSupport{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 24px;
+        color: red;
+        text-align: center;
+        font-weight: bold;
+
+    }
+}
+@media only screen and (max-width: 135px) {
+    body * {
+        display: none;
+    }
+    .Message_deviceNotSupport{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 15px;
+        color: red;
+        text-align: center;
+        font-weight: bold;
+
+    }
+}
+@media only screen and (max-width: 85px) {
+    body * {
+        display: none;
+    }
+    .Message_deviceNotSupport{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 10px;
+        color: red;
+        text-align: center;
+        font-weight: bold;
+
+    }
+}
